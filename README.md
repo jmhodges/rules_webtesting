@@ -139,6 +139,6 @@ py_web_test_suite(
         "@io_bazel_rules_webtesting//browsers:chromium-native",
     ],
     local = True,
-    deps = ["@io_bazel_rules_webtesting//testing/web"],
+    data = ["@io_bazel_rules_webtesting//testing/web"],
 )
 ```
