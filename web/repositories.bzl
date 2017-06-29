@@ -155,8 +155,6 @@ def com_github_gorilla_mux():
 def com_github_tebeka_selenium():
   go_repository(
       name="com_github_tebeka_selenium",
-      # TODO(DrMarcII) Remove when no longer needed
-      commit="8f4861d1f09c100da29ceec85424c3c96df15170",
       importpath="github.com/tebeka/selenium",
       sha256="345f204a3ece2469dcc82b59860dec095006e179b1c2ba3e9433b14c90dae167",
       strip_prefix="selenium-8f4861d1f09c100da29ceec85424c3c96df15170",
