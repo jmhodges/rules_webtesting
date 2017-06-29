@@ -149,7 +149,6 @@ def com_github_gorilla_mux():
       sha256="1a1b35782b0e38534b81d90bb86993fe830a7c1c3974a562554399f850ccdfcd",
       strip_prefix="mux-1.4.0",
       build_tags=["go1.9"],
-      tag="v1.4.0",  # TODO(DrMarcII) remove when no longer needed
       urls=["https://github.com/gorilla/mux/archive/v1.4.0.tar.gz"])
 
 
