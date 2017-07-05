@@ -21,11 +21,8 @@ import (
 	"crypto/tls"
 	"fmt"
 	"io"
-	"net"
 	"net/http"
 	"net/url"
-	"os"
-	"sort"
 	"strings"
 )
 
@@ -136,29 +133,5 @@ func (s longestToShortest) Less(i, j int) bool {
 // FQDN returns the fully-qualified domain name (or localhost if lookup
 // according to the hostname fails).
 func FQDN() (string, error) {
-	hostname, err := os.Hostname()
-	if err != nil {
-		// Fail if the kernel fails to report a hostname.
-		return "", err
-	}
-
-	addrs, err := net.LookupHost(hostname)
-	if err != nil {
-		return "localhost", nil
-	}
-
-	for _, addr := range addrs {
-		if names, err := net.LookupAddr(addr); err == nil && len(names) > 0 {
-			sort.Sort(longestToShortest(names))
-			for _, name := range names {
-				name = strings.TrimRight(name, ".")
-				if strings.HasPrefix(name, hostname) {
-					return name, nil
-				}
-			}
-			return names[0], nil
-		}
-	}
-
 	return "localhost", nil
 }
