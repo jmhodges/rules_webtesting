@@ -123,9 +123,13 @@ func (s longestToShortest) Less(i, j int) bool {
 	return len(s[i]) > len(s[j])
 }
 
-// FQDN returns the fully-qualified domain name (or localhost if lookup 
+// FQDN returns the fully-qualified domain name (or localhost if lookup
 // according to the hostname fails).
 func FQDN() (string, error) {
+	fqdn := os.Getenv("WEBTESTING_PROXY_FQDN")
+	if fqdn != "" {
+		return fqdn, nil
+	}
 	hostname, err := os.Hostname()
 	if err != nil {
 		// Fail if the kernel fails to report a hostname.
