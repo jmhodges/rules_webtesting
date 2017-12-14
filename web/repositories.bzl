@@ -186,11 +186,11 @@ def com_github_tebeka_selenium():
   go_repository(
       name="com_github_tebeka_selenium",
       importpath="github.com/tebeka/selenium",
-      sha256="22db05f2b3e7b1bfe0f84c45333be798627e1b091918a8c65e241b5b1e9df5cc",
-      strip_prefix="selenium-a7e71178aa40d9b298d464b912c4e831b2be4455",
+      sha256="5b3bff288a07d1bcb3397b954e0df5005eae7dc8089b713f88bf0df8f3dfb2f0",
+      strip_prefix="selenium-4bc91b5ff036f1cd12f315fd6042ecff6d94e512",
       urls=[
-          "https://mirror.bazel.build/github.com/tebeka/selenium/archive/a7e71178aa40d9b298d464b912c4e831b2be4455.tar.gz",
-          "https://github.com/tebeka/selenium/archive/a7e71178aa40d9b298d464b912c4e831b2be4455.tar.gz",
+          "https://mirror.bazel.build/github.com/tebeka/selenium/archive/4bc91b5ff036f1cd12f315fd6042ecff6d94e512.tar.gz",
+          "https://github.com/tebeka/selenium/archive/4bc91b5ff036f1cd12f315fd6042ecff6d94e512.tar.gz",
       ])
 
 
