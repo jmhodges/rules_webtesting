@@ -45,7 +45,7 @@ func New(d diagnostics.Diagnostics, m *metadata.Metadata, xvfb bool) (*ChromeDri
 		xvfb,
 		60*time.Second,
 		nil,
-		"--port={port}")
+		"--port={port}", "--verbose", "--log-path=welp.log")
 	if err != nil {
 		return nil, err
 	}
